@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!-- Required meta tags -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Vó Mina - Crafts</title>
+
+    <!-- Ícone na aba -->
+    <link rel = "icon" href = "./img/logo-icon-removebg.png" type = "image/x-icon"> 
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        
+  </head>
+
+  <body>
+        <!-- Navegação -->
+    <nav class="navbar navbar-expand-md navbar-light">
+            <div class="container">
+                
+                <!-- Logo -->
+                <a href="index.html">
+                    <img src="img/logo-expanded.png" width="300" height="100">
+                </a>
+
+                <!-- Botão collapse -->
+                <button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#collapseExample">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Nav Bar -->
+                <div class="collapse navbar-collapse justify-content-end" id="collapseExample">
+                    <ul class="navbar-nav" >
+                        <li class="nav-item">
+                            <a class="nav-link " href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link ativo" href="produtos.html">Produtos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="quem-somos.html">Quem somos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contato.html">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>   
+        </nav>
+
+        <div class="container my-5"> <!-- Container galeria (my - margin top and bottom) -->
+
+          <!-- Section -->
+            <section>
+            
+                <style>
+                  button.close {
+                    position: absolute;
+                    right: 0;
+                    z-index: 2;
+                    padding-right: 1rem;
+                    padding-top: .6rem;
+                  }
+                </style>
+            
+                <!-- Modal (expandir produto) - NÃO USADO POR ENQUANTO -->
+                <div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                        <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-body p-0">
+                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    
+                                    <!-- Grid row -->
+                                    <div class="row">
+                                    
+                                        <!-- Grid column -->
+                                        <div class="col-md-6 py-5 pl-5">
+                                            
+                                            <h5 class="font-weight-normal mb-3">Paper cup mockup</h5>
+
+                                            <p class="text-muted">Key letters, explain which writing we he carpeting or fame, the itch expand medical amped through constructing time. And scarfs, gain, get showed accounts decades.</p>
+
+                                            <ul class="list-unstyled font-small mt-5">
+                                                <li>
+                                                    <p class="text-uppercase mb-2"><strong>Client</strong></p>
+                                                    <p class="text-muted mb-4">Envato Inc.</p>
+                                                </li>
+
+                                                <li>
+                                                    <p class="text-uppercase mb-2"><strong>Date</strong></p>
+                                                    <p class="text-muted mb-4">June 27, 2019</p>
+                                                </li>
+
+                                                <li>
+                                                    <p class="text-uppercase mb-2"><strong>Skills</strong></p>
+                                                    <p class="text-muted mb-4">Design, HTML, CSS, Javascript</p>
+                                                </li>
+
+                                                <li>
+                                                    <p class="text-uppercase mb-2"><strong>Address</strong></p>
+                                                    <a href="https://mdbootstrap.com/docs/jquery/design-blocks/">MDBootstrap</a>
+                                                </li>
+                                            </ul>
+                                            
+                                        </div>
+                                        <!-- Grid column -->
+                                    
+                                        <!-- Grid column -->
+                                        <div class="col-md-6">
+                                            
+                                            <div class="view rounded-right">
+                                                <img class="img-fluid" src="https://mdbootstrap.com/img/Photos/Vertical/5.jpg" alt="Sample image">
+                                            </div>
+                                            
+                                        </div>
+                                        <!-- Grid column -->
+                                    
+                                    </div>
+                                    <!-- Grid row -->
+                                    
+                                </div>
+                            </div>
+                        </div>
+                </div> <!-- Fim modal -->
+
+                <h1 class="h3 mb-5">Explore nossos produtos por categoria:</h1>
+                    
+                <!--First row: Abas categorias -->
+                <div class="row">
+
+                  <!--First column: Abas categorias-->
+                  <div class="col-12">
+
+                    <!-- Nav categorias -->
+                     <ul class="nav nav-tabs md-pills justify-content-center">
+                      <li class="nav-item">
+                        <a href="#todos" class="nav-link font-weight-bold text-uppercase" role="tab" data-toggle="tab">Todos</a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#bebe" class="nav-link font-weight-bold text-uppercase" role="tab" data-toggle="tab">Bebê</a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#adulto" class="nav-link font-weight-bold text-uppercase" role="tab" data-toggle="tab">Adulto</a>
+                      </li>
+                      <li class="nav-item">
+                        <a href="#casa" class="nav-link font-weight-bold text-uppercase" role="tab" data-toggle="tab">Casa</a>
+                      </li>
+                    </ul> <!-- Fim Nav categorias -->
+
+                    
+                    <div class="tab-content">
+
+                      <!--Panel Todos -->
+                      <div class="tab-pane fade show in active" id="todos" role="tabpanel">
+                        <div class="row">
+
+                          <!-- BEBÊ -->
+
+                          <!-- Card 1 -->
+                          <div class="col-md-4 my-5">
+
+                            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+
+                            <!-- Card image -->
+                            <img class="card-img-top" src="./img/Coletes-resized.jpeg" alt="Card image cap">
+
+                              <!-- Card content -->
+                              <div class="card-body">
+
+                                <h5 class="my-3 h6">Kit Colete, Sapatinho e Luvinha</h5>
+                                <!-- <p class="card-text text-uppercase mb-3">Bag, Box</p> -->
+
+                              </div>
+
+                            </a>
+
+                        </div> <!-- Fim Card 1 -->
+
+                        <!-- Card 2 -->
+                          <div class="col-md-4 my-5">
+
+                            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+
+                            <!-- Card image -->
+                            <img class="card-img-top" src="./img/Sapatinhos-2-resized.jpeg" alt="Card image cap">
+
+                              <!-- Card content -->
+                              <div class="card-body">
+
+                                <h5 class="my-3 h6">Sapatinhos Laço</h5>
+                                <!-- <p class="card-text text-uppercase mb-3">Bag, Box</p> -->
+
+                              </div>
+
+                            </a>
+
+                        </div> <!-- Fim Card 2 -->
+
+                        <!-- Card 3 -->
+                          <div class="col-md-4 my-5">
+
+                            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+
+                            <!-- Card image -->
+                            <img class="card-img-top" src="./img/Sapatinhos-4-resized.jpeg" alt="Card image cap">
+
+                              <!-- Card content -->
+                              <div class="card-body">
+
+                                <h5 class="my-3 h6">Sapatinho Listrado</h5>
+                                <!-- <p class="card-text text-uppercase mb-3">Bag, Box</p> -->
+
+                              </div>
+
+                            </a>
+
+                        </div> <!-- Fim Card 3 -->
+
+                        <!-- Card 4 -->
+                          <div class="col-md-4 my-5">
+
+                            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+
+                            <!-- Card image -->
+                            <img class="card-img-top" src="./img/Sapatinhos-5-resized.jpeg" alt="Card image cap">
+
+                              <!-- Card content -->
+                              <div class="card-body">
+
+                                <h5 class="my-3 h6">Sapatinho Listrado</h5>
+                                <!-- <p class="card-text text-uppercase mb-3">Bag, Box</p> -->
+
+                              </div>
+
+                            </a>
+
+                        </div> <!-- Fim Card 4 -->
+
+                        <!-- Card 5 -->
+                          <div class="col-md-4 my-5">
+
+                            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+
+                            <!-- Card image -->
+                            <img class="card-img-top" src="./img/Sapatinhos-resized.jpeg" alt="Card image cap">
+
+                              <!-- Card content -->
+                              <div class="card-body">
+
+                                <h5 class="my-3 h6">Sapatinho Listrado</h5>
+                                <!-- <p class="card-text text-uppercase mb-3">Bag, Box</p> -->
+
+                              </div>
+
+                            </a>
+
+                        </div> <!-- Fim Card 5 -->
+
+                        <!-- Card 6 -->
+                          <div class="col-md-4 my-5">
+
+                            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+
+                            <!-- Card image -->
+                            <img class="card-img-top" src="./img/Coletes-2-resized.jpeg" alt="Card image cap">
+
+                              <!-- Card content -->
+                              <div class="card-body">
+
+                                <h5 class="my-3 h6">Colete Botões</h5>
+                                <!-- <p class="card-text text-uppercase mb-3">Bag, Box</p> -->
+
+                              </div>
+
+                            </a>
+
+                        </div> <!-- Fim Card 6 -->
+
+
+
+                        <!-- ADULTO -->
+                        <!-- Card 1 -->
+                          <div class="col-md-4 my-5">
+
+                            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+
+                            <!-- Card image -->
+                            <img class="card-img-top" src="./img/Gorro-1-resized.jpeg" alt="Card image cap">
+
+                              <!-- Card content -->
+                              <div class="card-body">
+
+                                <h5 class="my-3 h6">Gorro</h5>
+                                <!-- <p class="card-text text-uppercase mb-3">Bag, Box</p> -->
+
+                              </div>
+
+                            </a>
+
+                        </div> <!-- Fim Card 1 -->
+
+                        <!-- Card 2 -->
+                          <div class="col-md-4 my-5">
+
+                            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+
+                            <!-- Card image -->
+                            <img class="card-img-top" src="./img/Scarf-1-resized.jpeg" alt="Card image cap">
+
+                              <!-- Card content -->
+                              <div class="card-body">
+
+                                <h5 class="my-3 h6">Cachecol Trança</h5>
+                                <!-- <p class="card-text text-uppercase mb-3">Bag, Box</p> -->
+
+                              </div>
+
+                            </a>
+
+                        </div> <!-- Fim Card 2 -->
+
+                        <!-- Card 3 -->
+                          <div class="col-md-4 my-5">
+
+                            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+
+                            <!-- Card image -->
+                            <img class="card-img-top" src="./img/Scarf-2-resized.jpeg" alt="Card image cap">
+
+                              <!-- Card content -->
+                              <div class="card-body">
+
+                                <h5 class="my-3 h6">Enxarpe Colorida</h5>
+                                <!-- <p class="card-text text-uppercase mb-3">Bag, Box</p> -->
+
+                              </div>
+
+                            </a>
+
+                        </div> <!-- Fim Card 3 -->
+
+                        <!-- Card 3 -->
+                          <div class="col-md-4 my-5">
+
+                            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+
+                            <!-- Card image -->
+                            <img class="card-img-top" src="./img/Barra-1-resized.jpeg" alt="Card image cap">
+
+                              <!-- Card content -->
+                              <div class="card-body">
+
+                                <h5 class="my-3 h6">Barra Flor</h5>
+                                <!-- <p class="card-text text-uppercase mb-3">Bag, Box</p> -->
+
+                              </div>
+
+                            </a>
+
+                        </div> <!-- Fim Card 3 -->
+
+
+
+                        <!-- CASA -->
+                        <!-- Card 1 -->
+                          <div class="col-md-4 my-5">
+
+                            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+
+                            <!-- Card image -->
+                            <img class="card-img-top" src="./img/Restauracoes-resized.jpeg" alt="Card image cap">
+
+                              <!-- Card content -->
+                              <div class="card-body">
+
+                                <h5 class="my-3 h6">Restaurações</h5>
+                                <!-- <p class="card-text text-uppercase mb-3">Bag, Box</p> -->
+
+                              </div>
+
+                            </a>
+
+                        </div> <!-- Fim Card 1 -->
+
+                        <!-- Card 2 -->
+                          <div class="col-md-4 my-5">
+
+                            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+
+                            <!-- Card image -->
+                            <img class="card-img-top" src="./img/Barra-2-resized.jpeg" alt="Card image cap">
+
+                              <!-- Card content -->
+                              <div class="card-body">
+
+                                <h5 class="my-3 h6">Barra Toalha Flor</h5>
+                                <!-- <p class="card-text text-uppercase mb-3">Bag, Box</p> -->
+
+                              </div>
+
+                            </a>
+
+                        </div> <!-- Fim Card 2 -->
+
+                        <!-- Card 3 -->
+                          <div class="col-md-4 my-5">
+
+                            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+
+                            <!-- Card image -->
+                            <img class="card-img-top" src="./img/Barra-3-resized.jpeg" alt="Card image cap">
+
+                              <!-- Card content -->
+                              <div class="card-body">
+
+                                <h5 class="my-3 h6">Barra Toalha Geométrica</h5>
+                                <!-- <p class="card-text text-uppercase mb-3">Bag, Box</p> -->
+
+                              </div>
+
+                            </a>
+
+                        </div> <!-- Fim Card 3 -->
+
+                        <!-- Card 4 -->
+                          <div class="col-md-4 my-5">
+
+                            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+
+                            <!-- Card image -->
+                            <img class="card-img-top" src="./img/Barra-4-resized.jpeg" alt="Card image cap">
+
+                              <!-- Card content -->
+                              <div class="card-body">
+
+                                <h5 class="my-3 h6">Barra Toalha Jardim</h5>
+                                <!-- <p class="card-text text-uppercase mb-3">Bag, Box</p> -->
+
+                              </div>
+
+                            </a>
+
+                        </div> <!-- Fim Card 4 -->
+
+                        <!-- Card 5 -->
+                          <div class="col-md-4 my-5">
+
+                            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+
+                            <!-- Card image -->
+                            <img class="card-img-top" src="./img/bordados-resized.jpeg" alt="Card image cap">
+
+                              <!-- Card content -->
+                              <div class="card-body">
+
+                                <h5 class="my-3 h6">Livro Bordado</h5>
+                                <!-- <p class="card-text text-uppercase mb-3">Bag, Box</p> -->
+
+                              </div>
+
+                            </a>
+
+                        </div> <!-- Fim Card 5 -->
+                        </div>
+                      </div>
+
+                      <!--Panel Bebê -->
+                      <div class="tab-pane fade show " id="bebe" role="tabpanel">
+                        <div class="row">
+
+                          <!-- Card 1 -->
+                          <div class="col-md-4 my-5">
+
+                            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+
+                            <!-- Card image -->
+                            <img class="card-img-top" src="./img/Coletes-resized.jpeg" alt="Card image cap">
+
+                              <!-- Card content -->
+                              <div class="card-body">
+
+                                <h5 class="my-3 h6">Kit Colete, Sapatinho e Luvinha</h5>
+                                <!-- <p class="card-text text-uppercase mb-3">Bag, Box</p> -->
+
+                              </div>
+
+                            </a>
+
+                        </div> <!-- Fim Card 1 -->
+
+                        <!-- Card 2 -->
+                          <div class="col-md-4 my-5">
+
+                            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+
+                            <!-- Card image -->
+                            <img class="card-img-top" src="./img/Sapatinhos-2-resized.jpeg" alt="Card image cap">
+
+                              <!-- Card content -->
+                              <div class="card-body">
+
+                                <h5 class="my-3 h6">Sapatinhos Laço</h5>
+                                <!-- <p class="card-text text-uppercase mb-3">Bag, Box</p> -->
+
+                              </div>
+
+                            </a>
+
+                        </div> <!-- Fim Card 2 -->
+
+                        <!-- Card 3 -->
+                          <div class="col-md-4 my-5">
+
+                            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+
+                            <!-- Card image -->
+                            <img class="card-img-top" src="./img/Sapatinhos-4-resized.jpeg" alt="Card image cap">
+
+                              <!-- Card content -->
+                              <div class="card-body">
+
+                                <h5 class="my-3 h6">Sapatinho Listrado</h5>
+                                <!-- <p class="card-text text-uppercase mb-3">Bag, Box</p> -->
+
+                              </div>
+
+                            </a>
+
+                        </div> <!-- Fim Card 3 -->
+
+                        <!-- Card 4 -->
+                          <div class="col-md-4 my-5">
+
+                            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+
+                            <!-- Card image -->
+                            <img class="card-img-top" src="./img/Sapatinhos-5-resized.jpeg" alt="Card image cap">
+
+                              <!-- Card content -->
+                              <div class="card-body">
+
+                                <h5 class="my-3 h6">Sapatinho Listrado</h5>
+                                <!-- <p class="card-text text-uppercase mb-3">Bag, Box</p> -->
+
+                              </div>
+
+                            </a>
+
+                        </div> <!-- Fim Card 4 -->
+
+                        <!-- Card 5 -->
+                          <div class="col-md-4 my-5">
+
+                            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+
+                            <!-- Card image -->
+                            <img class="card-img-top" src="./img/Sapatinhos-resized.jpeg" alt="Card image cap">
+
+                              <!-- Card content -->
+                              <div class="card-body">
+
+                                <h5 class="my-3 h6">Sapatinho Listrado</h5>
+                                <!-- <p class="card-text text-uppercase mb-3">Bag, Box</p> -->
+
+                              </div>
+
+                            </a>
+
+                        </div> <!-- Fim Card 5 -->
+
+                        <!-- Card 6 -->
+                          <div class="col-md-4 my-5">
+
+                            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+
+                            <!-- Card image -->
+                            <img class="card-img-top" src="./img/Coletes-2-resized.jpeg" alt="Card image cap">
+
+                              <!-- Card content -->
+                              <div class="card-body">
+
+                                <h5 class="my-3 h6">Colete Botões</h5>
+                                <!-- <p class="card-text text-uppercase mb-3">Bag, Box</p> -->
+
+                              </div>
+
+                            </a>
+
+                        </div> <!-- Fim Card 6 -->
+
+                        </div>
+                      </div> <!-- Fim Panel Bebê -->
+
+                      <!--Panel Adulto -->
+                      <div class="tab-pane fade show" id="adulto" role="tabpanel">
+
+                        <div class="row">
+
+                          <!-- Card 1 -->
+                          <div class="col-md-4 my-5">
+
+                            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+
+                            <!-- Card image -->
+                            <img class="card-img-top" src="./img/Gorro-1-resized.jpeg" alt="Card image cap">
+
+                              <!-- Card content -->
+                              <div class="card-body">
+
+                                <h5 class="my-3 h6">Gorro</h5>
+                                <!-- <p class="card-text text-uppercase mb-3">Bag, Box</p> -->
+
+                              </div>
+
+                            </a>
+
+                        </div> <!-- Fim Card 1 -->
+
+                        <!-- Card 2 -->
+                          <div class="col-md-4 my-5">
+
+                            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+
+                            <!-- Card image -->
+                            <img class="card-img-top" src="./img/Scarf-1-resized.jpeg" alt="Card image cap">
+
+                              <!-- Card content -->
+                              <div class="card-body">
+
+                                <h5 class="my-3 h6">Cachecol Trança</h5>
+                                <!-- <p class="card-text text-uppercase mb-3">Bag, Box</p> -->
+
+                              </div>
+
+                            </a>
+
+                        </div> <!-- Fim Card 2 -->
+
+                        <!-- Card 3 -->
+                          <div class="col-md-4 my-5">
+
+                            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+
+                            <!-- Card image -->
+                            <img class="card-img-top" src="./img/Scarf-2-resized.jpeg" alt="Card image cap">
+
+                              <!-- Card content -->
+                              <div class="card-body">
+
+                                <h5 class="my-3 h6">Enxarpe Colorida</h5>
+                                <!-- <p class="card-text text-uppercase mb-3">Bag, Box</p> -->
+
+                              </div>
+
+                            </a>
+
+                        </div> <!-- Fim Card 3 -->
+
+                        <!-- Card 3 -->
+                          <div class="col-md-4 my-5">
+
+                            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+
+                            <!-- Card image -->
+                            <img class="card-img-top" src="./img/Barra-1-resized.jpeg" alt="Card image cap">
+
+                              <!-- Card content -->
+                              <div class="card-body">
+
+                                <h5 class="my-3 h6">Barra Flor</h5>
+                                <!-- <p class="card-text text-uppercase mb-3">Bag, Box</p> -->
+
+                              </div>
+
+                            </a>
+
+                        </div> <!-- Fim Card 3 -->
+
+                        
+
+                        </div>
+                      </div> <!--Fim Panel Adulto -->
+
+                      <!--Panel Casa -->
+                      <div class="tab-pane fade show" id="casa" role="tabpanel">
+                        <div class="row">
+
+                          <!-- Card 1 -->
+                          <div class="col-md-4 my-5">
+
+                            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+
+                            <!-- Card image -->
+                            <img class="card-img-top" src="./img/Restauracoes-resized.jpeg" alt="Card image cap">
+
+                              <!-- Card content -->
+                              <div class="card-body">
+
+                                <h5 class="my-3 h6">Restaurações</h5>
+                                <!-- <p class="card-text text-uppercase mb-3">Bag, Box</p> -->
+
+                              </div>
+
+                            </a>
+
+                        </div> <!-- Fim Card 1 -->
+
+                        <!-- Card 2 -->
+                          <div class="col-md-4 my-5">
+
+                            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+
+                            <!-- Card image -->
+                            <img class="card-img-top" src="./img/Barra-2-resized.jpeg" alt="Card image cap">
+
+                              <!-- Card content -->
+                              <div class="card-body">
+
+                                <h5 class="my-3 h6">Barra Toalha Flor</h5>
+                                <!-- <p class="card-text text-uppercase mb-3">Bag, Box</p> -->
+
+                              </div>
+
+                            </a>
+
+                        </div> <!-- Fim Card 2 -->
+
+                        <!-- Card 3 -->
+                          <div class="col-md-4 my-5">
+
+                            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+
+                            <!-- Card image -->
+                            <img class="card-img-top" src="./img/Barra-3-resized.jpeg" alt="Card image cap">
+
+                              <!-- Card content -->
+                              <div class="card-body">
+
+                                <h5 class="my-3 h6">Barra Toalha Geométrica</h5>
+                                <!-- <p class="card-text text-uppercase mb-3">Bag, Box</p> -->
+
+                              </div>
+
+                            </a>
+
+                        </div> <!-- Fim Card 3 -->
+
+                        <!-- Card 4 -->
+                          <div class="col-md-4 my-5">
+
+                            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+
+                            <!-- Card image -->
+                            <img class="card-img-top" src="./img/Barra-4-resized.jpeg" alt="Card image cap">
+
+                              <!-- Card content -->
+                              <div class="card-body">
+
+                                <h5 class="my-3 h6">Barra Toalha Jardim</h5>
+                                <!-- <p class="card-text text-uppercase mb-3">Bag, Box</p> -->
+
+                              </div>
+
+                            </a>
+
+                        </div> <!-- Fim Card 4 -->
+
+                        <!-- Card 5 -->
+                          <div class="col-md-4 my-5">
+
+                            <a class="card hoverable mb-4" data-toggle="modal" data-target="#basicExampleModal">
+
+                            <!-- Card image -->
+                            <img class="card-img-top" src="./img/bordados-resized.jpeg" alt="Card image cap">
+
+                              <!-- Card content -->
+                              <div class="card-body">
+
+                                <h5 class="my-3 h6">Livro Bordado</h5>
+                                <!-- <p class="card-text text-uppercase mb-3">Bag, Box</p> -->
+
+                              </div>
+
+                            </a>
+
+                        </div> <!-- Fim Card 5 -->
+
+                        
+
+                        </div>
+                      </div>
+
+                      
+
+                    </div> <!-- Fim tab content -->
+
+
+                  </div> <!--Fim First column: Abas categorias-->
+
+                </div> <!-- Fim first row: Abas categorias -->
+
+
+
+
+                
+                
+                
+
+                
+
+            </section> <!-- Fim Section -->
+
+        </div> <!-- Fim container galeria -->
+
+        <footer class="mt-5"> 
+            <p class="text-center">Desenvolvido por Paula Raposo - Todos os direitos reservados à <a href="#">Vó Mina &#174</p></a>
+        </footer>
+
+
+
+
+
+
+        <script type="text/javascript" src="produtos.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+  </body>
+</html>

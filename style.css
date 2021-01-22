@@ -1,0 +1,91 @@
+body, html {
+	background-color: #F5F5F5;
+}
+
+.nav-item {
+	text-decoration-color: #4C322B;
+	padding: 0 20px;
+}
+
+nav {
+	/*border: 1px solid red;*/
+}
+
+.ativo {
+	text-decoration: underline solid rgba(219, 180, 173, 0.8) 5px;
+}
+
+.botao {
+	color: #4C322B;
+}
+
+.botao:hover {
+	color: #F5F5F5;
+}
+
+.container {
+	position: relative;
+}
+
+.conteudo {
+	background-color: #DBB4AD;
+	color: #4C322B;
+}
+
+.teste {
+	position: relative;
+	top: 8px;
+	right: 16px;
+	font-size: 18px;
+}
+
+.divisor {
+	border: 2px solid #DBB4AD;
+	width: 15%;
+	background-color: #DBB4AD;
+	height:1px;
+	text-align:center; 
+	margin: 0 auto;
+}
+
+.banner {
+  background: #a770ef;
+  background: -webkit-linear-gradient(to right, #a770ef, #cf8bf3, #fdb99b);
+  background: linear-gradient(to right, #a770ef, #cf8bf3, #fdb99b);
+}
+
+.thumb {
+	border-radius: 50%;
+}
+
+.thumb:hover {
+	background-color: #DBB4AD;
+}
+
+.borda-red {
+	border: 1px solid red;
+}
+
+a {
+	text-decoration: none;
+	color: #4C322B;
+}
+
+a:hover {
+	text-decoration: none;
+	color: #DBB4AD;
+}
+
+footer {
+	background-color: #DBB4AD;
+	text-decoration-color: #4C322B;
+	font-size: 12px;
+}
+
+footer a:hover {
+	color: #F5F5F5;
+}
+
+.conteudo-texto {
+	font-size: 20px;
+}
